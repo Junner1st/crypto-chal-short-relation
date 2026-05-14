@@ -39,14 +39,14 @@ $$
 $$
 a \cdot (m_1 \cdot \texttt{window} + k_1)
 \equiv
-\texttt{account\_id} \cdot \texttt{window} + k_2
+\texttt{account\\_id} \cdot \texttt{window} + k_2
 \pmod p
 $$
 
 其中：
 
 $$
-0 \le m_1 < \texttt{item\_limit},\quad 0 \le k_1, k_2 < \texttt{window}
+0 \le m_1 < \texttt{item\\_limit},\quad 0 \le k_1, k_2 < \texttt{window}
 $$
 
 找到這組短關係後，後半段就和 Φ2Sin 一樣，利用自同態搬運簽章。

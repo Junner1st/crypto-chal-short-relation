@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    container_name: token-service-2
+    ports:
+      - "1341:5000"
+    environment:
+      FLAG: "CCCTF{walkFAAtHHur_u_bec0me_gIant}"
+    restart: unless-stopped

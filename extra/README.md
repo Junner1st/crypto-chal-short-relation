@@ -19,7 +19,7 @@ $$
 並且需要滿足：
 
 $$
-0 \le m < \texttt{item_limit},\quad 0 \le k < \texttt{window}
+0 \le m < \texttt{item\\_limit},\quad 0 \le k < \texttt{window}
 $$
 
 $$

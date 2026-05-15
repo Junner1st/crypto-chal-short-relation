@@ -23,7 +23,7 @@ $$
 並且需要滿足
 
 $$
-0 \le m < \texttt{item\_limit},\quad 0 \le k < \texttt{window}
+0 \le m < \texttt{item\\_limit},\quad 0 \le k < \texttt{window}
 $$
 
 $$
@@ -33,15 +33,15 @@ $$
 合法 $x_1$ 的密度大約是 $2^{-15}$ ，可以暴力列舉直到找到一組 bounded modular short relation。
 
 $$\begin{align*}
-& a\cdot x_1 = a \cdot (m_1 \cdot \texttt{window} + k_1) \equiv \texttt{account\_id} \cdot \texttt{window} + k_2 \pmod p \\
-\implies & x_1 \equiv a^{-1} \cdot (\texttt{account\_id} \cdot \texttt{window} + k_2) \pmod p
+& a\cdot x_1 = a \cdot (m_1 \cdot \texttt{window} + k_1) \equiv \texttt{account\\_id} \cdot \texttt{window} + k_2 \pmod p \\
+\implies & x_1 \equiv a^{-1} \cdot (\texttt{account\\_id} \cdot \texttt{window} + k_2) \pmod p
 \end{align*}
 $$
 
 只要 $x_1$ 落在合法 record 範圍
 
 $$
-0 \le x_1 < \texttt{item\_limit} \cdot \texttt{window}
+0 \le x_1 < \texttt{item\\_limit} \cdot \texttt{window}
 $$
 
 就能通過 record relation 的 $x = m \cdot \texttt{window} + k$ 的檢查。
@@ -52,7 +52,7 @@ $$
 
 $$
 p = 2^{127}-1 \approx 2^{127},\quad
-\texttt{item\_limit} \cdot \texttt{window} = 2^{64} \cdot 2^{48} = 2^{112}
+\texttt{item\\_limit} \cdot \texttt{window} = 2^{64} \cdot 2^{48} = 2^{112}
 $$
 
 隨機嘗試一個 $k_2$ 時，$x_1$ 落在合法範圍的機率約為

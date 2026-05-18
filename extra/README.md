@@ -73,7 +73,7 @@ $$
 1. 呼叫 $\texttt{params}$ 取得 $p$、$b$、$\texttt{window}$、$\texttt{item\\_limit}$、$\texttt{account\\_id}$ 和自同態係數 $a$。
 2. 計算 $a^{-1}$，並令 $\texttt{base} = a^{-1} \cdot \texttt{account\\_id} \cdot \texttt{window} \bmod p$。
 3. 從 $k_2 = 0$ 開始枚舉，計算 $x_1 = \texttt{base} + a^{-1} \cdot k_2 \bmod p$。
-4. 檢查 $x_1 < \texttt{item\\_limit} \cdot \texttt{window}$，若成立就拆成 $m_1, k_1 = \operatorname{divmod}(x_1, \texttt{window})$。
+4. 檢查 $x_1 < \texttt{item\\_limit} \cdot \texttt{window}$，若成立就拆成 $m_1, k_1 = \mathrm{divmod}(x_1, \texttt{window})$。
 5. 檢查 $m_1$ 不是 reserved account，並確認 $a \cdot x_1 \equiv \texttt{account\\_id} \cdot \texttt{window} + k_2 \pmod p$。
 6. 檢查對應曲線點是否存在，並且 witness $z$ 要滿足 $y \equiv z^2 \pmod p$。
 7. 讓 oracle 對非 reserved 的 relation point $(x_1, y)$ 簽章。

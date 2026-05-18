@@ -73,7 +73,7 @@ Because scalar multiplication commutes with $\phi$, the signature on the non-res
 1. Call $\texttt{params}$ to get $p$, $b$, $\texttt{window}$, $\texttt{item\\_limit}$, $\texttt{account\\_id}$, and the automorphism coefficient $a$.
 2. Compute $a^{-1}$, and set $\texttt{base} = a^{-1} \cdot \texttt{account\\_id} \cdot \texttt{window} \bmod p$.
 3. Enumerate from $k_2 = 0$, computing $x_1 = \texttt{base} + a^{-1} \cdot k_2 \bmod p$.
-4. Check whether $x_1 < \texttt{item\\_limit} \cdot \texttt{window}$; if true, split it into $m_1, k_1 = \operatorname{divmod}(x_1, \texttt{window})$.
+4. Check whether $x_1 < \texttt{item\\_limit} \cdot \texttt{window}$; if true, split it into $m_1, k_1 = \mathrm{divmod}(x_1, \texttt{window})$.
 5. Check that $m_1$ is not the reserved account, and verify $a \cdot x_1 \equiv \texttt{account\\_id} \cdot \texttt{window} + k_2 \pmod p$.
 6. Check that the corresponding curve point exists, and that witness $z$ satisfies $y \equiv z^2 \pmod p$.
 7. Ask the oracle to sign the non-reserved relation point $(x_1, y)$.
